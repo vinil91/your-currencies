@@ -1,0 +1,39 @@
+{
+  "name": "yourcurrencies",
+  "version": "0.0.1",
+  "description": "service for tracking the rates of the only currencies you need",
+  "main": "app.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "client:install": "npm install --prefix client",
+    "client:build": "npm run build --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev:install": "cross-env NODE_ENV=development concurrently \"npm install\" \"npm run client:install\""
+  },
+  "keywords": [
+    "rates",
+    "currencies"
+  ],
+  "author": "lebedko viktor <dnvictr@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "materialize-css": "^1.0.0-rc.2",
+    "mongoose": "^5.9.9",
+    "react-router-dom": "^5.2.0",
+    "react-select": "^3.1.0",
+    "shortid": "^2.2.15"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.3"
+  }
+}
